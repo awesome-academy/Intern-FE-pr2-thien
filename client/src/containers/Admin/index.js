@@ -1,7 +1,9 @@
 import React from "react";
 import { Switch, useRouteMatch } from "react-router";
+import PrivateRoute from "routes/Admin/privateRoute";
 import PublicRoute from "routes/publicRoute";
 import Login from "./Login";
+import Main from "./Main";
 
 const Admin = () => {
   const match = useRouteMatch();
@@ -9,7 +11,7 @@ const Admin = () => {
   return (
     <Switch>
       <PublicRoute exact path={`${match.url}/login`} component={Login} />
-      <PublicRoute path={`${match.url}`} component={() => <h1>Amin</h1>} />
+      <PrivateRoute path={`${match.url}`} component={Main} />
     </Switch>
   );
 };

@@ -4,6 +4,7 @@ export const baseURLUserProduct = "/user/product";
 export const baseURLUserOrder = "/user/order";
 
 export const baseURLAdminAuth = "/admin/auth";
+export const baseURLAdminUser = "/admin/user";
 
 export const baseUrl = "http://localhost:5000/api";
 
